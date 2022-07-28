@@ -1,38 +1,195 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;700&display=swap');
+@import url('https://css.gg/moon.css');
+@import url('https://css.gg/sun.css');
+@import url('https://css.gg/search.css');
+@import url('https://css.gg/arrow-left.css');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans'; 
+  font-weight: 700;
+}
+
+/* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 95%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+*/
+
+body {
+  background: var(--light);
+}
+
+:root {
+  --dark: hsl(207, 26%, 17%);
+  --light-text: hsl(200, 15%, 8%);
+  --light-input: hsl(0, 0%, 52%);
+  --light: hsl(0, 0%, 95%);
+  --white: hsl(0, 0%, 100%);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container h1 {
+  font-size: 1.2vw;
+  padding-bottom: 10px;
+}
+
+.container p {
+  font-size: 1vw;
+  padding: 2px;
+}
+
+.container {
+  float: left;
+  height: 40vh;
+  width: 18%;
+  text-decoration: none;
+  word-spacing: 3px;
+  letter-spacing: 0.3px;
+  margin: 3.5%;
+  border-radius: 0.5vw;
+  
+}
+
+
+img {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+}
+
+.details { 
+  padding: 15px;
+}
+
+
+.dark{
+  background-color: hsl(208, 23%, 22%) !important;
+  color: white !important;
+}
+
+.container-dark {
+  background-color: hsl(210, 23%, 25%) !important;
+  color: white !important;
+}
+
+.light {
+  background-color: white !important;
+  color: black !important;
+}
+
+
+.mode-bar, .search-bar {
+  padding: 4%;
+}
+
+.gg-search {
+  position: absolute;
+  margin: 1vw;
+  color: grey;
+}
+
+.search-bar input {
+  padding: 1vw 10vw;
+  border: none;
+  border-radius: 0.3vw;
+  float: left;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  font-size: 1vw;
+}
+
+.filter-bar select { 
+  padding: 1vw 3vw;
+  border: none;
+  border-radius: 0.3vw;
+  float: right;  
+}
+
+.switch-button { 
+  float: right;
+  border: none;
+  background-color: transparent;
+}
+
+.mode-bar h2 {
+  display: inline-block; 
+}
+
+i {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-container {
+  float: left;
+  margin-top: -5%;
+}
+
+.country-img {
+  width: 30vw;
+  height: 100%;
+  border-radius: 0;
+}
+
+.country-container {
+  width: 90vw;
+  padding: 5%;
+}
+
+.country-container h1 {
+  font-size: 2vw;
+  padding-bottom: 2vh;
+}
+
+.country-container ul, li {
+  font-size: 1.1vw;
+}
+
+.country-details {
+  float: right;
+  width: 60%;
+  margin-top: 5%;
+  line-height: 4vh;
+}
+
+.borders {
+  display: inline-block;
+  margin: 3px;
+  border: 1px solid gray;
+  padding: 0.1vh 1.5vw;
+  font-size: 1vw !important;
+  font-weight: 400;
+  color: gray
+}
+
+span {
+  font-weight: 400;
+}
+
+.back-button {
+  padding: 6px 25px;
+  margin-bottom: 20%;
+  font-size: 2.3vh;
+}
+
+.pls-wait {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select option {
+  color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
