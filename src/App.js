@@ -4,21 +4,22 @@ import { BrowserRouter as Router, Routes,
 import Header from "./header";
 import Countries from "./countries";
 import Country from "./country"
+import React from 'react';
 
 
 const App = () => {
 
 
     return (
+      <React.StrictMode>
       <Router>
-        <main>
         <Header />
         <Routes>
           <Route exact path="/" element={<Countries/>}></Route>
           <Route exact path="/:name" element={<Country />}> </Route>
         </Routes>
-        </main>
       </Router>
+      </React.StrictMode>
     );
   }
 
