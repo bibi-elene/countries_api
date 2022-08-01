@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 
 export default function Countries () {
-
+  const changes = {};
   const url = 'https://restcountries.com/v2/all';
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(false);
