@@ -33,7 +33,7 @@ export default function Country() {
       }
     
     if (error || !Array.isArray(country)) {
-        return <h1 className="pls-wait">There was an error loading your data!</h1>;
+        return <h1 className="pls-wait">There was an error!</h1>;
       }
 
     if (country) {

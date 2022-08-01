@@ -15,7 +15,7 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Countries/>}></Route>
+          <Route exact path="/countries_api" element={<Countries/>}></Route>
           <Route exact path="/:name" element={<Country />}> </Route>
         </Routes>
       </Router>
