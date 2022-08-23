@@ -2,6 +2,9 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function Countries () {
   const url = 'https://restcountries.com/v2/all';
@@ -60,9 +63,14 @@ useEffect(() => {
   if (product) {
     return (
     
-      <div>
+      <>
         <div className="search-bar">
-        <i className="gg-search"></i><input value={q} id="val" onChange={eventHandler} type="text" placeholder="Search for a country..."></input>
+
+        <div className="search">
+        <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon"/>
+        <input value={q} id="val" onChange={eventHandler} type="text" placeholder="Search for a country..."></input>
+        </div>
+
         <div className="filter-bar">
           <select onChange={filterReg}>
             <option value="All">Filter By Region</option>
@@ -73,8 +81,8 @@ useEffect(() => {
             <option value="Oceania">Oceania</option>
         </select>
         </div>
-          </div>
-  
+
+</div>  
       <div className="big-container">
         {search(product).map(({name, capital, region, population, flag}) => (
             <Link to={`/${name}`} key={name}>
@@ -90,7 +98,7 @@ useEffect(() => {
               </Link>
               ))}
         </div>
-        </div>
+        </>
     )
   };
 
