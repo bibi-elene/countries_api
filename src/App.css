@@ -47,7 +47,7 @@ ul {
 
 .container {
   float: left;
-  height: 40vh;
+  height: 100%;
   width: 18%;
   text-decoration: none;
   word-spacing: 3px;
@@ -193,3 +193,15 @@ select option {
   color: red;
 }
 
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 40%;
+  }
+}
